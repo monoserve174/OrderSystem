@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="container">
+    <div class="row justify-content-center">
+        <form class="form-signin col col-md-4" style="position: absolute; top:50%; transform: translateY(-50%)"
+              method="post" action="{{url_for('login')}}">
+            <h1 class="h3 mb-2">請登入</h1>
+            {{ form.csrf_token }}
+            {{ form.username.label(class="sr-only") }}
+            {{ form.username(class="form-control", placeholder="帳號(Login Name)") }}
+            {{ form.password.label(class="sr-only") }}
+            {{ form.password(class="form-control mt-2", placeholder="密碼(Password)") }}
+            {{ form.submit(class="btn btn-lg btn-primary btn-block my-2") }}
+            <p>沒有帳戶? <a href="#">點這註冊</a></p>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
