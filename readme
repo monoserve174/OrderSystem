@@ -6,3 +6,4 @@
     5. pymysql
     6. flask-migrate
     7. flask-wtf
+    8. email_validator

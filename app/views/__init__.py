@@ -1,2 +1,3 @@
 from .index import *
-from app.views.auth.loginout import *
+from .auth.loginout import *
+from .auth.register import *
